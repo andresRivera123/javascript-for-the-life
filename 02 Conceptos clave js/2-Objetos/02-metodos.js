@@ -73,7 +73,7 @@ const nombre = "Felipe";
 const { nombre: NombreConejo } = conejo;
 console.log(NombreConejo)
 //Por defecto
-const {salta : saltaConejo = "false"} = conejo
+const {salta : saltaConejo = false} = conejo
 console.log(saltaConejo)
 //Anidados
 const verdura = ["rabano", "Perejil"]
@@ -83,5 +83,5 @@ const {balanceado} = conejo.comidaFavorita//Forma 2
 console.log(balanceado)
 //Array
 const {legumbre} = conejo.comidaFavorita.verdura
-const [legumbreUno, legumbreDos, legumbreTres, legumbreCuadtro = "Garbanzo"] = legumbre
-console.log(legumbreUno, legumbreDos, legumbreCuadtro)
+const [legumbreUno, legumbreDos, legumbreTres, legumbreCuatro = "Garbanzo"] = legumbre
+console.log(legumbreUno, legumbreDos, legumbreCuatro)
