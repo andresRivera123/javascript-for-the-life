@@ -49,7 +49,7 @@ Object.values(gato).forEach((propiedades) => {
   console.log(propiedades);
 });
 
-//Destructuring: Nos permite desestructurar/desempacar valroes de los arreglos o propiedades de objetos en distitnas variables
+//Destructuring: Nos permite desestructurar/desempacar valores de los arreglos o propiedades de objetos en distitnas variables
 const conejo = {
   nombre: "Mario el conejo feliz",
   color: "Blanco",
