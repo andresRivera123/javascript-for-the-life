@@ -10,6 +10,7 @@ console.log("\n--APPEND CHILD--")
 lista.appendChild(li) //Si el child hace referencia a un nodo existete se mueve a la posición actual, significa que no puede estar en dos puntos
 
 const arrayPaises = ["Ecuador", "Peru", "Bolivia"]
+
 arrayPaises.forEach(paises => {
     const li = document.createElement("li")//Crear elemento
     li.textContent = paises//Ingresar el contenido
@@ -22,7 +23,7 @@ arrayPaises.forEach(paises => {
 //     lista.innerHTML += `<li>${pais}</li>`
 // })
 
-//Fragment: Representa un objeto de documento mínimo que no tiene padre, se utiliza como una verion ligera de document
+//Fragment: Representa un objeto de documento mínimo que no tiene padre, se utiliza como una versión ligera de document
 console.log("\n--FRAGMENT--")
 const arrayPaises2 = ["España", "Venezuela", "Costa Rica"]
 const fragment = document.createDocumentFragment()

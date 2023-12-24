@@ -34,6 +34,7 @@ const cargarPelicula = async () => {
             </div>`;
         document.getElementById("contenedor").innerHTML = peliculas;
       });
+      console.log(datosJSON)
     } else if (respuesta.status === 401) {
       console.log("Llave mal puesta");
     } else if (respuesta.status === 404) {
