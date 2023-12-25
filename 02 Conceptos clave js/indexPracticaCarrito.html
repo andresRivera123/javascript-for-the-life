@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+  </head>
+  <body style="background-color: rgb(212, 236, 236); font-family: system-ui">
+    <header style="width: 100%; display: flex; justify-content: center">
+      <h1>Fruteria Andyto y Carito</h1>
+    </header>
+    <main>
+      <div
+        id="lista-frutas"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4rem;
+          justify-content: center;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid white;
+            padding: 2rem;
+          "
+        >
+          <h3 style="font-size: 1.6rem">Naranja 🍊</h3>
+          <button
+            id="btnAgregar"
+            data-fruta="Naranja"
+            style="
+              border: 0;
+              font-size: 1rem;
+              padding: 0.5rem 1rem;
+              background-color: rgb(196, 196, 230);
+              cursor: pointer;
+            "
+          >
+            Agregar
+          </button>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid white;
+            padding: 2rem;
+          "
+        >
+          <h3 style="font-size: 1.6rem">Sandia 🍉</h3>
+          <button
+            id="btnAgregar"
+            data-fruta="Sandia"
+            style="
+              border: 0;
+              font-size: 1rem;
+              padding: 0.5rem 1rem;
+              background-color: rgb(196, 196, 230);
+              cursor: pointer;
+            "
+          >
+            Agregar
+          </button>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid white;
+            padding: 2rem;
+          "
+        >
+          <h3 style="font-size: 1.6rem">Banana 🍌</h3>
+          <button
+            id="btnAgregar"
+            data-fruta="Banana"
+            style="
+              border: 0;
+              font-size: 1rem;
+              padding: 0.5rem 1rem;
+              background-color: rgb(196, 196, 230);
+              cursor: pointer;
+            "
+          >
+            Agregar
+          </button>
+        </div>
+      </div>
+      <div id="carrito-container"></div>
+      <template id="carritoTemplate">
+        <div
+          id="producto"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 8rem;
+            padding: 1rem 2rem;
+            background-color: transparent;
+            border: 1px solid white;
+            @media screen and (max-width: 600px) {
+              margin: 2rem 1rem;
+            }
+          "
+        >
+          <p class="nombre-producto">Nombre producto</p>
+          <p class="cantidad-producto">n</p>
+        </div>
+      </template>
+    </main>
+    <script src="./3-DOM-1/08-practicaCarrito.js"></script>
+  </body>
+</html>
