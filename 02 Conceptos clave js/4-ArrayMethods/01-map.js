@@ -29,3 +29,10 @@ console.log("\nRetornar a un nuevo array multiplicado por 2");
 const numeros = [1, 2, 3, 4, 5];
 const numeroPorDos = numeros.map((numero) => numero * 2);
 console.log(numeroPorDos);
+
+console.log("\nRetornar el cuadrado de todos los elementos de un Array");
+const listaNumeros = [3, 6, 9, 12, 5];
+
+const numerosCuadrados = listaNumeros.map((numero) => numero * numero);
+console.log(listaNumeros);
+console.log(numerosCuadrados);
