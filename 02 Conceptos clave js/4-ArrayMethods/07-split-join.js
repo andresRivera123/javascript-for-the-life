@@ -1,4 +1,4 @@
-//SPLIT: Divide un objeto de tipo String en un array, mediante un separador.
+//SPLIT: Divide un String en un array, mediante un separador.
 console.log("\n--SPLIT-");
 console.log("\nCrear array meses del string");
 const cadenaMeses = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";

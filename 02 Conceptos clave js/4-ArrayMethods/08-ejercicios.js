@@ -103,10 +103,12 @@ console.log(
 );
 
 console.log("\nSplit) Transformar el string dias en un objeto");
-const stringFeo = "Lunes-Martes-Miercoles-Jueves-Viernes-Sabado-Domingo"
-console.log(stringFeo)
-const objetoSplit = stringFeo.split("-")
-console.log(objetoSplit)
+const stringFeo = "Lunes-Martes-Miercoles-Jueves-Viernes-Sabado-Domingo";
+console.log(stringFeo);
+const objetoSplit = stringFeo.split("-");
+console.log(objetoSplit);
 
-console.log("\nJoin) Tranformar el objetoSplit en un Array separado por 3 puntos");
-console.log(objetoSplit.join("..."))
+console.log(
+  "\nJoin) Tranformar el objetoSplit en un Array separado por 3 puntos"
+);
+console.log(objetoSplit.join("..."));
