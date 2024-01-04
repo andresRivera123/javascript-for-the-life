@@ -10,7 +10,7 @@ contenedor.addEventListener("click", (e) => {
         console.log("Imprimir con ID, padre")
     }
     //DATASET: Por medio de las propiedades del HTML podemos seleccionar el elemento 
-    //tambien puede ser:  console.log(e.target.dataset["div"]);
+    //tambien puede ser: console.log(e.target.dataset["div"]);
     if(e.target.dataset.div === "divHijo"){
         console.log("Imprimir con Dataset, hijo")
     }
