@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda instrumentos músicales</title>
+    <link rel="stylesheet" href="estilosMusica.css" />
+  </head>
+  <body>
+    <header class="tienda">
+      <h1>🎶Zona música Rivera Valle 🎶</h1>
+      <section class="tienda__contenedor">
+        <div class="tienda__instrumento">
+          <h3 class="instrumento__titulo">Trompeta 🎺</h3>
+          <p class="instrumento__precio">139$</p>
+          <button
+            class="instrumento__boton"
+            data-instrumento="Trompeta"
+            data-precio="139"
+          >
+            Agregar
+          </button>
+        </div>
+        <div class="tienda__instrumento">
+          <h3 class="instrumento__titulo">Piano 🎹</h3>
+          <p class="instrumento__precio">95$</p>
+          <button
+            class="instrumento__boton"
+            data-instrumento="Piano"
+            data-precio="95"
+          >
+            Agregar
+          </button>
+        </div>
+        <div class="tienda__instrumento">
+          <h3 class="instrumento__titulo">Violin 🎻</h3>
+          <p class="instrumento__precio">175$</p>
+          <button
+            class="instrumento__boton"
+            data-instrumento="Violin"
+            data-precio="175"
+          >
+            Agregar
+          </button>
+        </div>
+      </section>
+    </header>
+    <main>
+      <ul class="carrito">
+        <!-- TEMPLATE CARRITO -->
+        <template id="templateCarrito">
+          <li class="carrito__producto">
+            <div class="carrito__informacion">
+              <p class="carrito__producto-cantidad">000</p>
+              <p class="carrito__producto-nombre">Nombre producto</p>
+              <div class="carrito__botones">
+                <button class="botones__disminuir">➖</button>
+                <button class="botones__aumentar">➕</button>
+              </div>
+            </div>
+            <h3>$<span class="carrito__producto-total">000</span></h3>
+          </li></template
+        >
+      </ul>
+    </main>
+    <footer>
+      <!-- TEMPLATE TOTAL A PAGAR -->
+      <template id="templateTotalPagar">
+        <section class="totalPagar">
+          <h3>Total: $<span class="totalPagar-cantidad">000</span></h3>
+        </section>
+      </template>
+    </footer>
+    <script src="carritoInstrumentos.js"></script>
+  </body>
+</html>

@@ -50,7 +50,7 @@ const pintarFooter = () => {
       clone.querySelector("span").textContent = total;
       footer.appendChild(clone);
   }
-  
+
 };
 
 document.addEventListener("click", (e) => {
