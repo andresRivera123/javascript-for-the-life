@@ -2,9 +2,8 @@
 const carrito = document.querySelector(".carrito");
 const templateCarrito = document.getElementById("templateCarrito");
 const fragment = document.createDocumentFragment();
-const totalPagar = document.querySelector("footer")
-const templateTotalPagar = document.getElementById("templateTotalPagar")
-
+const totalPagar = document.querySelector("footer");
+const templateTotalPagar = document.getElementById("templateTotalPagar");
 
 let carritoInstrumentos = [];
 const agregarInstrumento = (e) => {
@@ -23,7 +22,6 @@ const agregarInstrumento = (e) => {
     carritoInstrumentos[indice].cantidad++;
   }
   imprimirCarrito();
-  imprimirTotal();
 };
 
 const imprimirCarrito = () => {
@@ -43,15 +41,22 @@ const imprimirCarrito = () => {
     fragment.appendChild(clone);
   });
   carrito.appendChild(fragment);
+  imprimirTotal();
 };
 
 const imprimirTotal = () => {
-  totalPagar.textContent = ""
-  const total = carritoInstrumentos.reduce((total, precioPorProducto) => total + precioPorProducto.cantidad * precioPorProducto.precioUnitario, 0)
-  const clone = templateTotalPagar.content.cloneNode(true)
-  clone.querySelector(".totalPagar-cantidad").textContent = total
-  totalPagar.appendChild(clone)
-}
+  totalPagar.textContent = "";
+  if (carritoInstrumentos.length > 0) {
+    const total = carritoInstrumentos.reduce(
+      (total, precioPorProducto) =>
+        total + precioPorProducto.cantidad * precioPorProducto.precioUnitario,
+      0
+    );
+    const clone = templateTotalPagar.content.cloneNode(true);
+    clone.querySelector(".totalPagar-cantidad").textContent = total;
+    totalPagar.appendChild(clone);
+  }
+};
 
 document.addEventListener("click", (e) => {
   if (e.target.matches(".tienda__instrumento .instrumento__boton")) {
@@ -71,23 +76,23 @@ const aumentarProducto = (e) => {
     if (producto.id === e.target.dataset.id) {
       producto.cantidad++;
     }
-    imprimirCarrito();
     return producto;
   });
+  imprimirCarrito();
 };
 
 const disminuirProducto = (e) => {
   carritoInstrumentos = carritoInstrumentos.filter((producto) => {
     if (producto.id === e.target.dataset.id) {
-      if(producto.cantidad > 0){
+      if (producto.cantidad > 0) {
         producto.cantidad--;
-        if(producto.cantidad === 0){
+        if (producto.cantidad === 0) {
           return;
         }
-        return producto
+        return producto;
       }
-    }else{
-      return producto
+    } else {
+      return producto;
     }
   });
   imprimirCarrito();
