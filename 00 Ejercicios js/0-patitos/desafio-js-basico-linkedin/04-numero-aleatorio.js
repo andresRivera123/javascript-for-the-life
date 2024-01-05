@@ -5,8 +5,8 @@ console.log("   1) Obtener número aleatorio aunque los valores sean decimales")
 const numeroAleatorio = (min, max) => {
   console.log("Antes de los métodos: ");
   console.log("min: " + min + "| max: " + max);
-  min = Math.ceil(min); //ceil: devuelve el entero mayor
-  max = Math.floor(max); //floor: devuelve el entero menor
+  min = Math.ceil(min); //ceil: redondea hacia arriba
+  max = Math.floor(max); //floor: redondea hacia abajo
   console.log("Después de los métodos: ");
   console.log("min: " + min + "| max: " + max);
 
