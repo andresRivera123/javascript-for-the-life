@@ -51,9 +51,15 @@ body {
   border-radius: 0.4rem;
   background-color: #4c3077;
   color: #ffffff;
+  
   &:hover {
     background-color: #dfd9e8;
     color: #4c3077;
+    font-weight: bold;
+  }
+  &:active{
+    background-color: #bbb5c4ec;
+    color: #5b3a8d;
     font-weight: bold;
   }
 }
