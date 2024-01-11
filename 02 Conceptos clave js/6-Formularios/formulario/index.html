@@ -39,55 +39,88 @@
 
         <div>
           <label for="country"
-          >Country:
-          <select id="userCountry" name="country">
-            <option value="nothing"></option>
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="ecuador">Ecuador</option>
-            <option value="espana">España</option>
-          </select></label
-        >
-        <p id="userCountryMessage" class="error__none"></p>
+            >Country:
+            <select id="userCountry" name="country">
+              <option value="nothing"></option>
+              <option value="Australia">Australia</option>
+              <option value="Canada">Canada</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="España">España</option>
+            </select></label
+          >
+          <p id="userCountryMessage" class="error__none"></p>
         </div>
-        <label for="userDate"
-          >Date of birth:
-          <input
-            type="date"
-            id="userDate"
-            name="userDate"
-            min="1900-01-01"
-            max="2023-01-01"
-        /></label>
-        <label for="userEmail">
-          Email:
-          <input
-            type="email"
-            id="userEmail"
-            name="userEmail"
-            placeholder="Enter your email"
-        /></label>
-        <label for="userPassword">
-          Password:
-          <input
-            type="password"
-            id="userPassword"
-            class="user__password"
-            name="userPassword"
-            placeholder="Enter your password"
-          />
-        </label>
-        <label for="userPasswordRepeat"
-          >Repeat password:
-          <input
-            type="password"
-            id="userPasswordRepeat"
-            class="user__password-repeat"
-            name="userPasswordRepeat"
-            placeholder="Enter your password"
-        /></label>
+        <div>
+          <label for="userDate"
+            >Date of birth:
+            <input
+              type="date"
+              id="userDate"
+              name="userDate"
+              min="1900-01-01"
+              max="2023-01-01"
+          /></label>
+          <p id="userDateMessage" class="error__none"></p>
+        </div>
+        <div>
+          <label for="userEmail">
+            Email:
+            <input
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              placeholder="Enter your email"
+          /></label>
+          <p id="userEmailMessage" class="error__none"></p>
+        </div>
+        <div>
+          <label for="userPassword">
+            Password:
+            <input
+              type="password"
+              id="userPassword"
+              class="user__password"
+              name="userPassword"
+              placeholder="Enter your password"
+            />
+            <img
+              id="iconVisible1"
+              class="icon__eye"
+              src="./img/visible.png"
+              alt="Visible password"
+            />
+          </label>
+
+          <p id="userPasswordMessage" class="error__none"></p>
+        </div>
+        <div>
+          <label for="userPasswordRepeat"
+            >Repeat password:
+            <input
+              type="password"
+              id="userPasswordRepeat"
+              class="user__password-repeat"
+              name="userPasswordRepeat"
+              placeholder="Enter your password" />
+
+            <img
+              id="iconVisible2"
+              class="icon__eye"
+              src="./img/visible.png"
+              alt="Visible password"
+          /></label>
+          <p id="userPasswordRepeatMessage" class="error__none"></p>
+        </div>
         <button type="submit" id="buttonSubmit" class="button">Send</button>
       </form>
+      <footer>
+        <template id="template">
+          <h2 id="completeName"></h2>
+          <h3>Email: <span id="email"></span></h3>
+          <h3>From: <span id="country">asd</span></h3>
+          <h3>You were born in: <span id="date">asd</span></h3></template
+        >
+      </footer>
     </main>
     <script src="validateForm.js"></script>
   </body>
