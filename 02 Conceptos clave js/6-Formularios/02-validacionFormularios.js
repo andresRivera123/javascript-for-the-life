@@ -9,7 +9,7 @@ type: Especifica si los datos deben ser un número, una dirección de correo ele
 pattern: Especifica una expresión regular que define un patrón que los datos que se introduzcan deben seguir.
 */
 
-//Validación con JS: se codifica utilizando JavaScript. Esta validación es completamente personalizable, pero debes crearlo todo (o usar una biblioteca).
+//Validación con JS: Se codifica utilizando JavaScript. Esta validación es completamente personalizable, pero debes crearlo todo (o usar una biblioteca).
 
 const formulario = document.getElementById("form");
 const userName = document.getElementById("userNameJS");
