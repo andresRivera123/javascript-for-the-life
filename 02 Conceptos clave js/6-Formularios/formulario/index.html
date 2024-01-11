@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Register</h1>
+      <form id="form" class="form">
+        <div>
+          <label for="userName"
+            >Name:
+            <input
+              type="text"
+              id="userName"
+              class="user__name"
+              name="userName"
+              autocomplete="off"
+              placeholder="Enter your name"
+          /></label>
+          <p id="userNameMessage" class="error__none"></p>
+        </div>
+        <div>
+          <label for="lastName"
+            >Lastname:
+            <input
+              type="text"
+              id="userLastname"
+              class="user__lastname"
+              name="userLastname"
+              autocomplete="off"
+              placeholder="Enter your lastname"
+          /></label>
+          <p id="userLastnameMessage" class="error__none"></p>
+        </div>
+
+        <div>
+          <label for="country"
+          >Country:
+          <select id="userCountry" name="country">
+            <option value="nothing"></option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="espana">España</option>
+          </select></label
+        >
+        <p id="userCountryMessage" class="error__none"></p>
+        </div>
+        <label for="userDate"
+          >Date of birth:
+          <input
+            type="date"
+            id="userDate"
+            name="userDate"
+            min="1900-01-01"
+            max="2023-01-01"
+        /></label>
+        <label for="userEmail">
+          Email:
+          <input
+            type="email"
+            id="userEmail"
+            name="userEmail"
+            placeholder="Enter your email"
+        /></label>
+        <label for="userPassword">
+          Password:
+          <input
+            type="password"
+            id="userPassword"
+            class="user__password"
+            name="userPassword"
+            placeholder="Enter your password"
+          />
+        </label>
+        <label for="userPasswordRepeat"
+          >Repeat password:
+          <input
+            type="password"
+            id="userPasswordRepeat"
+            class="user__password-repeat"
+            name="userPasswordRepeat"
+            placeholder="Enter your password"
+        /></label>
+        <button type="submit" id="buttonSubmit" class="button">Send</button>
+      </form>
+    </main>
+    <script src="validateForm.js"></script>
+  </body>
+</html>
