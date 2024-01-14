@@ -1,5 +1,5 @@
 //fetch API: Proporciona una interfaz para recuperar recursos
-console.log("\n--FETCH API INTRODUCCIÓN");
+console.log("FETCH API INTRODUCCIÓN");
 const url = "https://jsonplaceholder.typicode.com/posts";
 //fetch(): Devuelve una Promise con la ruta de acceso al recurso que desea recuperar, necesita un argumento obligatorio.
 fetch(url).then((response) => console.log(response));
