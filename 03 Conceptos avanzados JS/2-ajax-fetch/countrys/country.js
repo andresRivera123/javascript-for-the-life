@@ -38,7 +38,14 @@ const paintTemplateCountry = (data) => {
     clone.getElementById("nameCountry").textContent = item.name;
     clone.getElementById("imgCountry").setAttribute("src", item.flag);
     clone.getElementById("imgCountry").alt = "Flag from " + item.name;
-
+    if (item.name === "Afghanistan") {
+      clone
+        .getElementById("imgCountry")
+        .setAttribute(
+          "src",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Flag_of_Afghanistan_%282013%E2%80%932021%29.svg/255px-Flag_of_Afghanistan_%282013%E2%80%932021%29.svg.png"
+        );
+    }
     fragment.appendChild(clone);
   });
   countryContainer.appendChild(fragment);

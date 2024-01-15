@@ -39,18 +39,20 @@
       <div id="countryContainer" class="row pt-4"></div>
       <!-- Template card -->
       <template id="templateCountry">
-        <article class="col-12 col-sm-6 col-md-4 p-4 bg-light rounded">
-          <div class="d-flex flex-column">
-            <p id="isoCountry" class="m-0">ISO</p>
-            <h3 id="nameCountry" class="text-center">Nigeria</h3>
+        <article class=" col-12 col-sm-6 col-md-4 p-2 bg-light rounded">
+          <div class="card shadow p-4">
+            <div class="d-flex flex-column">
+              <p id="isoCountry" class="m-0">ISO</p>
+              <h3 id="nameCountry" class="text-center">Nigeria</h3>
+            </div>
+            <img
+              id="imgCountry"
+              src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
+              loading="lazy"
+              alt="Img country"
+              class="rounded float-left h-75"
+            />
           </div>
-          <img
-            id="imgCountry"
-            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
-            loading="lazy"
-            alt="Img country"
-            class="rounded float-left w-100"
-          />
         </article>
       </template>
       <!-- Empty Country -->
