@@ -18,26 +18,43 @@
   <body class="bg-body-secondary">
     <main class="container d-flex justify-content-center flex-column pt-5">
       <h2>🌏 Country Search 🌎</h2>
-      <div class="input-group ">
+      <div class="input-group">
         <div class="input-group-preprend">
-            <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
         </div>
-        <input id="inputCocktailName" type="text" class="form-control" placeholder="Country name">
+        <input
+          id="inputSearchCountry"
+          type="text"
+          class="form-control"
+          placeholder="Country name"
+        />
       </div>
       <!-- Loading -->
-      <section class="d-none">
+      <section id="loadingSection" class="d-none text-center p-5">
         <div class="spinner-border text-dark" role="status">
           <span class="sr-only"></span>
         </div>
       </section>
-      <!-- Cocktails -->
-      <div class="row pt-5">
-        <article class="col-12 col-sm-6 col-md-4">
-          <h6>ISO: NGR</h6>
-          <h5>Country: Nigeria</h5>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" alt="" class="rounded float-left w-100">
+      <!-- Countrys container -->
+      <div id="countryContainer" class="row pt-4"></div>
+      <!-- Template card -->
+      <template id="templateCountry">
+        <article class="col-12 col-sm-6 col-md-4 p-4 bg-light rounded">
+          <div class="d-flex flex-column">
+            <p id="isoCountry" class="m-0">ISO</p>
+            <h3 id="nameCountry" class="text-center">Nigeria</h3>
+          </div>
+          <img
+            id="imgCountry"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
+            loading="lazy"
+            alt="Img country"
+            class="rounded float-left w-100"
+          />
         </article>
-      </div>
+      </template>
+      <!-- Empty Country -->
+      <div id="emptyCountryText" class="d-none text-center">We did not find this country</div>
     </main>
     <script src="country.js"></script>
   </body>
