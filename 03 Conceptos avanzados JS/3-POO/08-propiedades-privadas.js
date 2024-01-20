@@ -1,0 +1,1 @@
+/* Private class fields: Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe una propuesta experimental para permitir la definición de campos de clase privados utilizando un #prefijo hash . */
