@@ -19,7 +19,7 @@ document.addEventListener("click", (e) => {
     if (e.target.matches(".btn-danger")) {
       estudiantes.map((item) => {
         if (item.nombre === e.target.dataset.nombre) {
-          item.setEstado = false;
+          item.setEstado = false;  
         }
         console.log(item);
         return item;
