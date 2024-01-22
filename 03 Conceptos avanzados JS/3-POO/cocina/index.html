@@ -23,9 +23,9 @@
           value="Federico"
         />
         <select class="form-select" name="cargo">
-          <option value="Cocinero" selected>Cocinero</option>
+          <option value="Cocinero">Cocinero</option>
           <option value="Mesero">Mesero</option>
-          <option value="Cliente">Cliente</option>
+          <option value="Cliente" selected>Cliente</option>
         </select>
         <button class="btn btn-primary">Agregar</button>
       </form>
@@ -35,20 +35,36 @@
         <div id="meserosContenedor" class="col-4"></div>
         <div id="cocinerosContenedor" class="col-4"></div>
         <!-- Template CLIENTE -->
-        <template id="templateCliente"
-          ><article class="card bg-secondary p-3 text-white mb-2">
-            <h3 id="nombreCliente">name</h3>
+        <template id="templateCliente">
+          <article
+            class="card bg-secondary p-3 text-white mb-2 position-relative"
+          >
+            <button
+              id="closeCard" class="position-absolute top-0 end-0 border-0 bg-transparent"
+            >
+              ❌
+            </button>
+            <div class="card-header">
+              <h3 id="nombreCliente">name</h3>
+            </div>
             <h5 id="cargoCliente">cargo</h5>
             <select id="pedidoCliente" class="form-select" name="comida">
               <option value="Churrasco">Churrasco</option>
               <option value="Tilapia">Tilapia a la plancha</option>
               <option value="Marinero">Arroz marinero</option>
             </select>
-          </article>
-        </template>
+          </article></template
+        >
         <!-- Template MESERO -->
         <template id="templateMesero">
-          <article class="card bg-secondary p-3 text-white mb-2">
+          <article
+            class="card bg-secondary p-3 text-white mb-2 position-relative"
+          >
+            <button
+              id="closeCard" class="position-absolute top-0 end-0 border-0 bg-transparent"
+            >
+              ❌
+            </button>
             <h3 id="nombreMesero">name</h3>
             <h5 id="cargoMesero">cargo</h5>
             <textarea id="comanda" class="form-control" rows="1"></textarea>
@@ -57,7 +73,14 @@
         </template>
         <!-- Template COCINERO -->
         <template id="templateCocinero">
-          <article class="card bg-secondary p-3 text-white mb-2">
+          <article
+            class="card bg-secondary p-3 text-white mb-2 position-relative"
+          >
+            <button
+              id="closeCard" class="position-absolute top-0 end-0 border-0 bg-transparent"
+            >
+              ❌
+            </button>
             <h3 id="nombreCocinero">name</h3>
             <h5 id="cargoCocinero">cargo</h5>
             <p class="badge bg-info">SIN COCINAR</p>
