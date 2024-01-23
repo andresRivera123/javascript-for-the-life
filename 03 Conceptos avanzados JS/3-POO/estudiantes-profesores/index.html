@@ -14,6 +14,7 @@
   <body>
     <div class="container my-5">
       <h1>Estudiante y profesores</h1>
+      <div class="alert alert-danger d-none">Por favor ingrese todos los datos</div>
       <form id="formulario" class="d-flex flex-column gap-3">
         <input
           class="form-control"
@@ -29,7 +30,11 @@
           required
           placeholder="Ingrese la edad"
         />
-        <select class="form-select" name="opcion" aria-label="Selecionar opción">
+        <select
+          class="form-select"
+          name="opcion"
+          aria-label="Selecionar opción"
+        >
           <option value="Estudiante" selected>Estudiante</option>
           <option value="Profesor">Profesor</option>
         </select>
