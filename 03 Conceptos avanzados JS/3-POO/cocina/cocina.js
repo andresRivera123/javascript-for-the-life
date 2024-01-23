@@ -41,22 +41,36 @@ class Persona {
 }
 
 class Cliente extends Persona {
-  constructor(id, nombre, cargo, pedido, totalPagar = 0) {
+  constructor(id, nombre, cargo, pedido = "vacio", totalPagar = 0) {
     super(id, nombre, cargo);
     this.pedido = pedido;
     this.totalPagar = totalPagar;
   }
 
-  crearNuevoCliente() {
-    const clone = templateCliente.cloneNode(true);
-    clone.getElementById("nombreCliente").textContent = this.nombre;
-    clone.getElementById("cargoCliente").textContent = this.cargo;
-    clone.getElementById("closeCard").dataset.idcard = this.id;
-    return clone;
+  set setPedido(pedido) {
+    this.pedido = pedido;
   }
 
-  comer() {
-    console.log("Procede a comer");
+  habilitarBotonPedido(bool) {
+    const botonDisabled = document.querySelector(`[data-pedido="${this.id}"]`);
+    if (bool) {
+      botonDisabled.disabled = true;
+    } else {
+      botonDisabled.disabled = false;
+    }
+  }
+
+  crearNuevoCliente() {
+    const clone = templateCliente.cloneNode(true);
+    clone.getElementById("closeCard").dataset.idcard = this.id;
+    clone.getElementById("nombreCliente").textContent = this.nombre;
+    clone.getElementById("cargoCliente").textContent = this.cargo;
+    clone.getElementById("pedidoCliente").dataset.pedidocliente = this.id;
+    clone.getElementById("pedidoCliente").value = this.pedido;
+    clone.getElementById("enviarPedido").dataset.pedido = this.id;
+    clone.getElementById("enviarPedido").disabled =
+      this.pedido === "vacio" ? true : false;
+    return clone;
   }
 }
 
@@ -110,7 +124,28 @@ document.addEventListener("click", (e) => {
         (item) => item.id !== e.target.dataset.idcard
       );
       Persona.pintarUI(cocinerosArray, "Cocinero");
-      console.log(cocinerosArray);
+
+    }
+  }
+  /* Agregar comida en Cliente y mandarla si existe un mesero */
+});
+
+document.addEventListener("change", (e) => {
+  /* Agregar pedido en cliente y habilitar/deshabilitar boton pedido */
+  if (e.target.id === "pedidoCliente") {
+    for (let i in clientesArray) {
+      if (clientesArray[i].id === e.target.dataset.pedidocliente) {
+        const cliente = clientesArray[i];
+        if (e.target.value === "vacio") {
+
+          cliente.setPedido = "vacio";
+          cliente.habilitarBotonPedido(true);
+        } else {
+
+          cliente.setPedido = e.target.value;
+          cliente.habilitarBotonPedido(false);
+        }
+      }
     }
   }
 });
